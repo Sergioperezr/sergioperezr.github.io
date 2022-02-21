@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', event => {
 
 //EDICION DE Sergio
 // function([string1, string2],target id,[color1,color2])
- consoleText(['Inteligente.', 'Responsable', 'Dinamico.'], 'text',['tomato','rebeccapurple','lightblue']);
+ consoleText(['proactive.', 'dynamic.', 'collaborative.','competitive.','innovative.','organized.','responsible.','leader.','team worker.'], 'text',['tomato','rebeccapurple','lightblue']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
