@@ -11615,3 +11615,16 @@ section.resume-section .resume-section-content {
   background:#fff;
   color: black;
 }
+
+
+/*EDICION*/
+
+.console-container {
+  font-size:1.25rem;
+  text-align:left;
+  color: #6c757d;
+}
+.console-underscore {
+  display:inline-block;
+  position:relative;
+}
