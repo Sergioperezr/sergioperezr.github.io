@@ -11434,10 +11434,11 @@ p.lead {
 
 section.resume-section {
   display: flex;
-  align-items: center;
+  /*align-items: center;*/
+  align-items: stretch;
   padding-left: 1rem;
   padding-right: 1rem;
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 5rem;
   max-width: 75rem;
 }
@@ -11454,7 +11455,7 @@ section.resume-section .resume-section-content {
   section.resume-section {
     padding-left: 3rem;
     padding-right: 3rem;
-    padding-top: 5rem;
+    padding-top: 17rem;
     padding-bottom: 5rem;
   }
 }
@@ -11462,9 +11463,16 @@ section.resume-section .resume-section-content {
 
 /* ADICION DE ESTILOS PARA IMAGEN DE PERFIL*/
 @media (max-width: 992px) {
-  .carreaux_presentation_light .shadow_swhow_mini
+  /*.carreaux_presentation_light .shadow_swhow_mini
   {
       display: none;
+  }*/
+  .div-image-profile{
+        display: none;
+
+  }
+  .profile-image-move{
+        display: block;
   }
   .nav {
     text-align: left;
@@ -11472,6 +11480,14 @@ section.resume-section .resume-section-content {
 }
 
 @media (min-width: 992px) {
+.div-image-profile{
+      display: table-cell;
+}
+.profile-image-move{
+      display: none;
+}
+}
+
 .carreaux_presentation_light
 {
   max-width: 13rem;
@@ -11538,10 +11554,6 @@ section.resume-section .resume-section-content {
 }
 
 
-.nav {
-  text-align: center;
-}
-}
 
 
 /* ADICION DE EFECTO EN EL MENU */
@@ -11627,4 +11639,19 @@ section.resume-section .resume-section-content {
 .console-underscore {
   display:inline-block;
   position:relative;
+}
+
+
+.profile-image-move {
+  text-align: center;
+  margin: auto;
+  position: sticky;
+  margin-bottom: 3rem;
+  width: 200px;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  max-height: 13rem;
+
 }
