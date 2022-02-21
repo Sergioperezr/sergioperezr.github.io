@@ -3948,6 +3948,8 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -3965,7 +3967,7 @@ textarea.form-control-lg {
 .nav-tabs {
   border-bottom: 1px solid #dee2e6;
 }
-.nav-tabs .nav-link {
+.nav-tabs . {
   margin-bottom: -1px;
   background: none;
   border: 1px solid transparent;
@@ -3983,10 +3985,18 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
+  text-transform: uppercase;
+  /* espaciado entre cajas */
+  line-height: 2.5em;
   color: #495057;
   background-color: #fff;
   border-color: #dee2e6 #dee2e6 #fff;
+  display: block;
+  list-style: outside none none;
+  margin: .5em 1em;
+  paddin: 0;
 }
+
 .nav-tabs .dropdown-menu {
   margin-top: -1px;
   border-top-left-radius: 0;
@@ -4064,6 +4074,8 @@ textarea.form-control-lg {
   padding-left: 0;
   margin-bottom: 0;
   list-style: none;
+  box-sizing: border-box;
+  transition: all .35s ease;
 }
 .navbar-nav .nav-link {
   padding-right: 0;
@@ -4073,6 +4085,9 @@ textarea.form-control-lg {
   position: static;
 }
 
+/* EDIDCION SERGIO PEREZ INCIO*/
+
+/* FIN EDIDCION SERGIO PEREZ INICIO*/
 .navbar-text {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -4093,6 +4108,8 @@ textarea.form-control-lg {
   border-radius: 0.25rem;
   transition: box-shadow 0.15s ease-in-out;
 }
+
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
@@ -4486,9 +4503,15 @@ textarea.form-control-lg {
 .navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
   color: rgba(255, 255, 255, 0.75);
 }
+
 .navbar-dark .navbar-nav .nav-link.disabled {
   color: rgba(255, 255, 255, 0.25);
 }
+
+
+
+
+
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
@@ -11443,6 +11466,9 @@ section.resume-section .resume-section-content {
   {
       display: none;
   }
+  .nav {
+    text-align: left;
+  }
 }
 
 @media (min-width: 992px) {
@@ -11510,34 +11536,33 @@ section.resume-section .resume-section-content {
 {
   background-color:#417c74;right:0px;
 }
+
+
+.nav {
+  text-align: center;
+}
 }
 
 
-
-
 /* ADICION DE EFECTO EN EL MENU */
+
+.nav {
+  flex-direction: column;
+  text-transform: uppercase;
+
+  font-weight: 600;
+  /* espaciado entre cajas */
+  line-height: 2.5em;
+  margin: auto;
+}
 .nav ul {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   display: flex;
-}
-
-.nav {
-  font-family: 'Roboto';
-  padding-left: 0;
-  padding-right: 0;
-  text-align: center;
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  width: 17rem;
-  height: 50vh;
-  text-transform: uppercase;
-  /*font-weight: 600;*/S
-  /* espaciado entre cajas */
-  line-height: 2.5em;
+  width: 70%;
+  margin: auto;
 }
 
 .nav * {
@@ -11554,15 +11579,14 @@ section.resume-section .resume-section-content {
 }
 
 .nav a {
-  padding: .4em .7em;
+  padding: .5em .8em;
   position: relative;
   text-decoration: none;
-  font-size: 13px;
+  font-size: 15px;
   color: #fff;
-  font-family: sans-serif;
+
+
 }
-
-
 .nav a::before {
   content: '';
   position: absolute;
@@ -11572,31 +11596,22 @@ section.resume-section .resume-section-content {
   height: 100%;
   border-top: 1px solid #262626;
   border-bottom: 1px solid #262626;
-  transform: scaleX(1.2);
+  transform: scaleX(2);
   opacity: 0;
   transition: .3s;
 }
 
-.nav a:after {
-  content: '';
-  position: absolute;
-  top: 1px;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #495057;
-  transform: scale(0);
-  opacity: 0;
-  transition: .3s;
-  z-index: -1;
-}
 
-.nav a:hover:before,
-.nav a:hover:after{
-  transform: scaleX(1);
+.nav a:hover:before{
+  transform: scaleY(1);
   opacity: 1;
 }
 
-.nav a:hover {
+.nav a:hover{
+  background:#fff;
   color: #bd5d38;
+}
+.nav a:focus{
+  background:#fff;
+  color: black;
 }
