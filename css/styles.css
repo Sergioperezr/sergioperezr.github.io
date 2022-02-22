@@ -11737,3 +11737,158 @@ background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #c
 background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
 }
+
+
+/*ADCION DE ESTILOS PARA TABLA SKILLS*/
+
+
+.skills {
+  display: contents;
+  /* position: relative; */
+  /* top: 50%; */
+  /* left: 50%; */
+  float: left;
+  /* transform: translate(-50%, -50%); */
+  background: #fff;
+  border-radius: 10px;
+}
+
+
+.skills-bar {
+  -padding: 25px 30px;
+  padding-bottom: 20px
+}
+
+.skills-bar .bar {
+  /*Distancia entre barras*/
+  margin: 10px 0;
+}
+
+.skills-bar .bar .info span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skills-bar .bar .info {
+  margin-bottom: 8px;
+  color: #07374a;
+}
+
+.skills-bar .bar .progress-line {
+  position: relative;
+  height: 10px;
+  /*Largo de la barra*/
+  width: 700px;
+  background: #f0f0f0;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  animation: animate .7s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line span {
+  position: absolute;
+  background: #6c757d;
+  height: 100%;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  text-transfrom = uppercase;
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+
+.progress-line .bar_automation {
+  width: 90%;
+}
+.progress-line .bar_uipath {
+  width: 90%;
+}
+.progress-line .bar_java {
+  width: 40%;
+}
+.progress-line .bar_c {
+  width: 60%;
+}
+.progress-line .bar_sqlserver {
+  width: 90%;
+}
+.progress-line .bar_postgresql {
+  width: 70%;
+}
+.progress-line .bar_mongo {
+  width: 40%;
+}
+.progress-line .html {
+  width: 60%;
+}
+
+
+.bar .progress-line span::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  right: 0;
+  top: -14px;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-style: #f0f0f0;
+  border-top-color: #70C1B3;
+}
+
+.bar .progress-line span::after {
+  position: absolute;
+  right: 0;
+  top: -28px;
+  color: #f0f0f0;
+  font-size: 12px;
+  font-weight: 700;
+  background: #70C1B3;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+
+.progress-line .bar_automation::after {
+  content: "90%";
+}
+.progress-line .bar_uipath::after {
+  content: "90%";
+}
+.progress-line .bar_java::after {
+  content: "40%";
+}
+.progress-line .bar_c::after {
+  content: "60%";
+}
+.progress-line .bar_sqlserver::after {
+  content: "90%";
+}
+ .progress-line .bar_postgresql::after {
+  content: "70%";
+}
+ .progress-line .bar_mongo::after {
+  content: "40%";
+}
+ .progress-line .html::after {
+  content: "60%";
+}
+
+/* ////........Media Query........//// */
+
+@media (max-width: 700px) {
+    .skills{
+        width: 80%;
+    }
+
+    .skills-bar .bar .progress-line{
+        width: 100%;
+    }
+}

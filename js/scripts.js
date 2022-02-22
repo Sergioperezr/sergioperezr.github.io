@@ -35,9 +35,23 @@ window.addEventListener('DOMContentLoaded', event => {
 
 
 //EDICION DE Sergio
+
+window.addEventListener('scroll', function() {
+  let animationSkills =  this.document.getElementById('skills');
+  let posAnimation = this.document.getElementById('skills').getBoundingClientRect().top;
+
+  let heightScreen = window.innerHeight/3;
+  if (posAnimation < heightScreen ){
+      console.log('Entra');
+      animationSkills.style.animation = 'animate'
+  }
+
+})
+
+
+
 // function([string1, string2],target id,[color1,color2])
  consoleText(['proactive.', 'dynamic.', 'collaborative.','competitive.','innovative.','organized.','responsible.','leader.','team worker.'], 'text',['#6c757d','tomato','rebeccapurple','lightblue']);
-
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
   var visible = true;
