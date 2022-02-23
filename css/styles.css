@@ -3957,7 +3957,10 @@ textarea.form-control-lg {
 }
 .nav-link:hover, .nav-link:focus {
   color: #974a2d;
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
 }
+
+
 .nav-link.disabled {
   color: #6c757d;
   pointer-events: none;
@@ -3985,6 +3988,7 @@ textarea.form-control-lg {
 }
 .nav-tabs .nav-link.active,
 .nav-tabs .nav-item.show .nav-link {
+
   text-transform: uppercase;
   /* espaciado entre cajas */
   line-height: 2.5em;
@@ -4012,6 +4016,7 @@ textarea.form-control-lg {
 .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #bd5d38;
+
 }
 
 .nav-fill > .nav-link,
@@ -4515,6 +4520,8 @@ textarea.form-control-lg {
 .navbar-dark .navbar-nav .show > .nav-link,
 .navbar-dark .navbar-nav .nav-link.active {
   color: #fff;
+  /*Edicion Sergio*/
+  box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
 }
 .navbar-dark .navbar-toggler {
   color: rgba(255, 255, 255, 0.55);
@@ -11565,7 +11572,8 @@ section.resume-section .resume-section-content {
   font-weight: 600;
   /* espaciado entre cajas */
   line-height: 2.5em;
-  margin: auto;
+  -margin: auto;
+  width: -webkit-fill-available;
 }
 .nav ul {
   position: absolute;
@@ -11585,20 +11593,20 @@ section.resume-section .resume-section-content {
 .nav li {
   display: block;
   list-style: outside none none;
-  margin: .5em 1em;
+  margin: .1em 1em;
   paddin: 0;
 
 }
 
 .nav a {
-  padding: .5em .8em;
+  display: block;
+  padding: .3em .8em;
   position: relative;
   text-decoration: none;
   font-size: 15px;
   color: #fff;
-
-
 }
+/*
 .nav a::before {
   content: '';
   position: absolute;
@@ -11626,6 +11634,52 @@ section.resume-section .resume-section-content {
 .nav a:focus{
   background:#fff;
   color: black;
+} */
+
+.btn {
+      -position: relative;
+      /* display: block; */
+      /* width: 250px; */
+      /* margin: 20px auto; */
+      /* padding: 10px; */
+      /* background-color: #fff; */
+      /* border: 1px solid #ccc; */
+      /* color: #000; */
+      /* text-align: center; */
+      /* text-decoration: none; */
+      text-transform: uppercase;
+      transform-style: flat;
+      transition: all 250ms ease-out;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 2.5em;
+}
+
+ .btn:before, .btn:after {
+	 content: "";
+	 position: absolute;
+	 z-index: -2;
+	 transition: all 250ms ease-out;
+   color: #6c757d;
+}
+
+
+/* Raised effect – pushes up on hover */
+.paper-raise:before {
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+}
+ .paper-raise:hover {
+	 -border: 1px solid #6c757d;
+}
+ .paper-raise:hover:before {
+	 box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+}
+ .paper-raise:focus-within {
+	 box-shadow: 0 15px 10px -10px rgba(31, 31, 31, 0.5);
+   -border: 1px solid #6c757d;
 }
 
 
