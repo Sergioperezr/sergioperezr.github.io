@@ -115,3 +115,47 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+
+
+//SCRIP PARA GALERAI DE CURSOS Y CERTIFICACIONES
+const gallery = document.getElementById('gallery');
+const images = gallery.querySelectorAll('img');
+const modal = document.getElementById('modal_gallery');
+const btnCloseModal = document.getElementById('close_modal_gallery');
+let imgModal = modal.querySelector('.ctn_modal_gallery .modal_body_gallery img');
+
+function closeModal() {
+	document.body.classList.remove('no-scroll-y');
+	modal.classList.remove('show_modal_gallery');
+}
+
+if ( gallery && images ) {
+	document.addEventListener('click', e => {
+		if ( modal ) {
+			if (e.target.matches('.gallery img') )  {
+
+				let indexImg = Array.from(images).indexOf(e.target);
+
+				let attrSrcImg = Array.from(images).map(imgSrc => imgSrc.getAttribute('src'));
+				let indexAttrSrcImg = attrSrcImg[indexImg];
+
+				imgModal.setAttribute('src', indexAttrSrcImg);
+				imgModal.style.display = 'block';
+				imgModal.style.width = '100%';
+				document.body.classList.add('no-scroll-y');
+				modal.classList.add('show_modal_gallery');
+
+			}
+		}
+	});
+}
+
+if ( btnCloseModal ) {
+	document.addEventListener('click', e => {
+		e.target.matches('.close_modal_gallery') || e.target.matches('.close_modal_gallery i') ? closeModal() : '';
+	});
+
+	document.addEventListener('keydown', e => {
+		e.key === 'Escape' ? closeModal() : '';
+	});
+}
