@@ -34,16 +34,31 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 
-//EDICION DE Sergio
+//EDICION DE Sergio Barra Skills
 
 window.addEventListener('scroll', function() {
-  let animationSkills =  this.document.getElementById('skills');
+  const bar_automation = document.querySelector('.bar_automation');
+  const bar_uipath = document.querySelector('.bar_uipath');
+  const bar_java = document.querySelector('.bar_java');
+  const bar_c = document.querySelector('.bar_c');
+  const bar_sqlserver = document.querySelector('.bar_sqlserver');
+  const bar_postgresql = document.querySelector('.bar_postgresql');
+  const bar_mongo = document.querySelector('.bar_mongo');
+  const bar_html = document.querySelector('.bar_html');
+
+
   let posAnimation = this.document.getElementById('skills').getBoundingClientRect().top;
 
-  let heightScreen = window.innerHeight/3;
+  let heightScreen = window.innerHeight/2;
   if (posAnimation < heightScreen ){
-      console.log('Entra');
-      animationSkills.style.animation = 'animate'
+      bar_automation.classList.add('class-animate');
+      bar_uipath.classList.add('class-animate');
+      bar_java.classList.add('class-animate');
+      bar_c.classList.add('class-animate');
+      bar_sqlserver.classList.add('class-animate');
+      bar_postgresql.classList.add('class-animate');
+      bar_mongo.classList.add('class-animate');
+      bar_html.classList.add('class-animate');
   }
 
 })

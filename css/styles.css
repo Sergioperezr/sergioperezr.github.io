@@ -11794,6 +11794,9 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   transform: scaleX(0);
   transform-origin: left;
   text-transfrom = uppercase;
+  -animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+.class-animate{
   animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
 }
 
@@ -11824,7 +11827,7 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
 .progress-line .bar_mongo {
   width: 40%;
 }
-.progress-line .html {
+.progress-line .bar_html {
   width: 60%;
 }
 
@@ -11877,7 +11880,7 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
  .progress-line .bar_mongo::after {
   content: "40%";
 }
- .progress-line .html::after {
+ .progress-line .bar_html::after {
   content: "60%";
 }
 
