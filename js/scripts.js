@@ -66,7 +66,7 @@ window.addEventListener('scroll', function() {
 
 
 // function([string1, string2],target id,[color1,color2])
- consoleText(['proactive.', 'dynamic.', 'collaborative.','competitive.','innovative.','organized.','responsible.','leader.','team worker.'], 'text',['#6c757d','tomato','rebeccapurple','lightblue']);
+ consoleText(['proactive.', 'dynamic.', 'collaborative.','competitive.','innovative.','organized.','responsible.','leader.','team worker.'], 'text',['#e5383b','#e09f3e','#9e2a2b','#540b0e','#17c3b2','#fe6d73']);
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
   var visible = true;
