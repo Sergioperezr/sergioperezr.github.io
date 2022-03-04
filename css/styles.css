@@ -11871,16 +11871,16 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   width: 40%;
 }
 .progress-line .bar_c {
-  width: 60%;
+  width: 40%;
 }
 .progress-line .bar_sqlserver {
-  width: 90%;
+  width: 80%;
 }
 .progress-line .bar_postgresql {
   width: 70%;
 }
 .progress-line .bar_mongo {
-  width: 40%;
+  width: 30%;
 }
 .progress-line .bar_html {
   width: 60%;
@@ -11924,16 +11924,16 @@ background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75
   content: "40%";
 }
 .progress-line .bar_c::after {
-  content: "60%";
+  content: "40%";
 }
 .progress-line .bar_sqlserver::after {
-  content: "90%";
+  content: "80%";
 }
  .progress-line .bar_postgresql::after {
   content: "70%";
 }
  .progress-line .bar_mongo::after {
-  content: "40%";
+  content: "30%";
 }
  .progress-line .bar_html::after {
   content: "60%";
