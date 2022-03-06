@@ -18,6 +18,36 @@
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
+                <!-- Messenger Plugin de chat Code -->
+              <div id="fb-root"></div>
+
+              <!-- Your Plugin de chat code -->
+              <div id="fb-customer-chat" class="fb-customerchat">
+              </div>
+
+              <script>
+                var chatbox = document.getElementById('fb-customer-chat');
+                chatbox.setAttribute("page_id", "104026508902870");
+                chatbox.setAttribute("attribution", "biz_inbox");
+              </script>
+
+              <!-- Your SDK code -->
+              <script>
+                window.fbAsyncInit = function() {
+                  FB.init({
+                    xfbml            : true,
+                    version          : 'v13.0'
+                  });
+                };
+
+                (function(d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0];
+                  if (d.getElementById(id)) return;
+                  js = d.createElement(s); js.id = id;
+                  js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
+                  fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));
+              </script>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
