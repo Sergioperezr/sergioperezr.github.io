@@ -45,6 +45,8 @@ window.addEventListener('scroll', function() {
   const bar_postgresql = document.querySelector('.bar_postgresql');
   const bar_mongo = document.querySelector('.bar_mongo');
   const bar_html = document.querySelector('.bar_html');
+  const bar_pad = document.querySelector('.bar_pad');
+  const bar_rocketbot = document.querySelector('.bar_rocketbot');
 
 
   let posAnimation = this.document.getElementById('skills').getBoundingClientRect().top;
@@ -59,6 +61,8 @@ window.addEventListener('scroll', function() {
       bar_postgresql.classList.add('class-animate');
       bar_mongo.classList.add('class-animate');
       bar_html.classList.add('class-animate');
+      bar_pad.classList.add('class-animate');
+      bar_rocketbot.classList.add('class-animate');
   }
 
 })
