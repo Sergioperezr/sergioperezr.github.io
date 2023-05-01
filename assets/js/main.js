@@ -413,6 +413,7 @@ window.addEventListener('scroll', function() {
 	const bar_html = document.querySelector('.bar_html');
 	const bar_pad = document.querySelector('.bar_pad');
 	const bar_rocketbot = document.querySelector('.bar_rocketbot');
+	const bar_vb = document.querySelector('.bar_vb');
   
   
 	let posAnimation = this.document.getElementById('skills').getBoundingClientRect().top;
@@ -429,6 +430,7 @@ window.addEventListener('scroll', function() {
 		bar_html.classList.add('class-animate');
 		bar_pad.classList.add('class-animate');
 		bar_rocketbot.classList.add('class-animate');
+		bar_vb.classList.add('class-animate');
 	}
   
   })
